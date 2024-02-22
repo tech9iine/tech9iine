@@ -1,0 +1,124 @@
+*{box-sizing: border-box;margin: 0;padding: 0;}
+:root{
+  --text-primary: #50acdd;
+  --bg-primary: #50acdd;
+  
+  --text-primary-1: #427b91;
+  --bg-primary-1: #427b91;
+
+  --text-secondary: #5dffff;
+  --bg-secondary: #5dffff;
+
+  --text-tertiary: #07726f;
+  --bg-tertiary: #07726f;
+
+  --text-white: #ffffff;
+  --bg-white: #ffffff;
+  
+  --primary-gradient:  linear-gradient(to left, var(--text-primary) 50%, var(--text-secondary));
+  --primary-gradient-1:  linear-gradient(to left, var(--text-primary) 0%, var(--text-secondary) 60%);
+}
+
+.text-gradient {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-gradient-1 {
+  background: var(--primary-gradient-1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+html{}
+html,body{
+  /* height: 100%; */
+}
+
+body{
+  color: var(--text-white);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  
+  background-color: red;
+  background-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  direction: rtl;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+img{max-width: 100%;display: block;}
+
+
+.background-image{background: url(../imgs/background.png);width: 100%;background-size: cover;background-position: center;background-repeat: no-repeat;min-height: 100vh;display: flex;flex-direction: column;padding: 40px 15px;}
+
+
+.centered-box{margin: auto;padding: 0px 0px;}
+.centered-box .logo-sm{margin: auto;margin-bottom: 30px;}
+.centered-box .main-title{font-size: 40px;font-weight: 400;text-align: center;}
+.centered-box .login-title{}
+
+.login-box {padding: 40px 40px;margin: auto 0;border: 2px solid;border-radius: 10px;min-width: 458px;}
+.login-box .login-title{text-align: center;margin-bottom: 40px;}
+.login-box input{padding: 10px 50px 10px 20px;background-color: transparent;border: 2px solid var(--bg-white);width: 100%;max-width: 100%;border-radius: 50px;height: 50px;text-align: left;color: var(--text-white);font-size: 16px;font-weight: 600;box-shadow: unset;outline: none;transition: .4s;}
+.login-box input:hover,
+.login-box input:focus{border: 2px solid var(--bg-white);border-color: var(--bg-primary);}
+.login-box input::placeholder{color: var(--text-white)}
+.input-wrapper {position: relative;margin-bottom: 30px;}
+.input-wrapper svg{width: 23px;height: 23px; position: absolute;right: 15px;top: 0;bottom: 0;margin: auto;}
+
+
+.submit-btn{padding: 10px 30px;border: 0;background-color: var(--bg-tertiary);height: 54px;color:var(--text-white);font-weight: 600;font-size: 18px;width: 100%;border-radius: 50px;position: relative;border: 4px groove var(--bg-primary);border-style: ridge;cursor: pointer;transition: .4s;}
+.submit-btn:hover{filter: brightness(.9);border-color: var(--bg-tertiary);}
+
+
+
+.social-icons{}
+.social-icons .social-title{font-size: 40px;text-align: center;font-weight: 400;margin-bottom: 40px;}
+.social-icons>div{display: flex;gap: 40px;justify-content: center;}
+.social-icons a {display: block;position: relative;}
+.social-icons a .img-wrapper{background-color: var(--bg-primary-1);padding: 10px;border-radius: 10px;position: relative;}
+.social-icons a:hover{filter: brightness(1.2);}
+.social-icons img{width: 60px;min-width: 60px;}
+
+
+.social-icons span:before {
+  content:'';
+  position: absolute;
+  width: 0; 
+  height: 0; 
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid var(--bg-white);
+  position:absolute;
+  bottom:-7px;
+  left:0px;
+  right: 0;
+  margin: auto;
+  z-index: -1; visibility: hidden;opacity: 0;transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.social-icons a span{position: absolute;top: -59px;left: -10px;right: -10px; background-color: var(--bg-white);height: 50px;margin: auto;text-align: center;line-height: 1; display: flex;justify-content: center;align-items: center;border-radius: 5px;color: var(--bg-primary);font-weight: 600;font-size: 18px;text-transform: capitalize;transform: translateY(100px);z-index: -1; visibility: hidden;opacity: 0;transition: all .4s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+
+
+.social-icons a:hover span:before,
+.social-icons a:hover span{transform: translateY(0px);visibility: visible;opacity: 1;}
+
+
+.logo-title-wrapper{margin-bottom: 40px;}
+.social-icons{margin-top: 40px;}
+
+
+
+
+
+
+
+
+
+
+@media(max-width:1200px){}
+@media(max-width:600px){
+  .login-box {padding: 15px 15px;min-width: auto;}
+  .social-icons>div {gap: 15px;}
+  .social-icons img{width: 40px;min-width: 40px;}
+}

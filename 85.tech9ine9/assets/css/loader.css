@@ -1,0 +1,19 @@
+.bg-logo{position: fixed;top: 0;bottom: 0;right: 0;left: 0;display: flex;align-items: center;justify-content: center;flex-direction: column;}
+.bg-logo img{animation: logo-transform 1.5s linear 1 forwards;}
+.logo-title-wrapper img{animation: logo-transform 1s linear 4s 1 forwards;}
+
+
+@keyframes logo-transform{
+  from{transform: scale(2);}
+  to{transform: scale(1);}
+}
+
+
+.logo-text,
+.logo-title-wrapper,
+.login-box,
+.social-icons{opacity: 0;visibility: hidden;}
+
+.logo-text.opacity_hide,
+.opacity_hide{opacity: 0;visibility: hidden;transition: 1.5s;}
+.opacity_show{opacity: 1;visibility: visible;transition: 1.5s;}
